@@ -1,10 +1,10 @@
 import { Center, Text } from 'native-base';
-
+import LogoNlw from '../assets/logo.svg';
 
 export const SignIn = () => {
   return (
     <Center flex={1} bgColor='gray.900'>
-      <Text color='white' fontSize={22}>SignIn</Text>
+      <LogoNlw width={212} height={40} />
     </Center>
   )
 }
