@@ -47,8 +47,8 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
     }
   }
 
-  async function signInWithGoogle(accessToken: string) {
-    console.log('AccessToken ', accessToken);
+  async function signInWithGoogle(access_token: string) {
+    console.log('access_token ', access_token);
     
   }
 
