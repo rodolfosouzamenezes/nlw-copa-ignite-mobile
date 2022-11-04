@@ -7,7 +7,7 @@ import LogoNlw from '../assets/logo.svg';
 
 
 export const SignIn = () => {
-  const { signIn, user } = useAuth();
+  const { signIn, isUserLoading } = useAuth();
 
   return (
     <Center flex={1} bgColor='gray.900' p='7' >
@@ -19,6 +19,7 @@ export const SignIn = () => {
         type='secondary'
         leftIcon={<Icon as={Fontisto} name='google' color='white' size='sm' />}
         mt='12'
+        isLoading={isUserLoading}
       />
 
       <Text color='white' textAlign='center' mt='4' >

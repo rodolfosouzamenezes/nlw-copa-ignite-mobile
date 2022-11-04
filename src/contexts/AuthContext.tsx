@@ -76,10 +76,7 @@ export function AuthContextProvider({ children }: AuthProviderProps) {
     <AuthContext.Provider value={{
       signIn,
       isUserLoading,
-      user: {
-        name: 'John',
-        avatarUrl: 'http://github.com/john.png',
-      }
+      user,
     }}>
       {children}
     </AuthContext.Provider>
