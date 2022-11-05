@@ -24,7 +24,7 @@ export function NewPool() {
     try {
       setIsLoading(true);
 
-      await api.post('/pools', { title })
+      await api.post('/pools', { title: title.toLocaleUpperCase() })
 
       toast.show({
         title: 'Bolão criado com sucesso',
