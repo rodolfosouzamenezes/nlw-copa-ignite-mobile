@@ -3,6 +3,7 @@ import { HStack, useToast, VStack } from "native-base";
 import { useState, useEffect } from "react";
 import { Share } from "react-native";
 import { EmptyMyPoolList } from "../components/EmptyMyPoolList";
+import { Guesses } from "../components/Guesses";
 import { Header } from "../components/Header";
 import { Loading } from "../components/Loading";
 import { Option } from "../components/Option";
@@ -77,6 +78,8 @@ export function PoolDetails() {
               <Option title="Seus Palpites" isSelected={optionSelected === 'guesses'} onPress={() => setOptionSelected('guesses')} />
               <Option title="Ranking do grupo" isSelected={optionSelected === 'ranking'} onPress={() => setOptionSelected('ranking')} />
             </HStack>
+
+            <Guesses poolId={poolDetails.id} />
           </VStack>
 
           : <EmptyMyPoolList code={poolDetails.code} onShare={handleCodeShare} />
